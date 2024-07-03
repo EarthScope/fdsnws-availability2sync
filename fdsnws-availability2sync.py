@@ -7,7 +7,7 @@ import os.path
 import sys
 import re
 
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
 def read_input(input):
@@ -52,7 +52,7 @@ def print_sync(dccid, timespans):
         seed_end = seed_datetime(end)
 
         # Print SYNC timespan line
-        print(f'{network}|{station}|{location}|{channel}|{seed_start}|{seed_end}||{samplerate}||||{quality}||||')
+        print(f'{network}|{station}|{location}|{channel}|{seed_start}|{seed_end}||{samplerate}||||{quality}||||||')
 
 
 def seed_datetime(dtstr):
