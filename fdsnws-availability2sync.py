@@ -7,7 +7,7 @@ import os.path
 import sys
 import re
 
-__version__ = '0.2.0'
+__version__ = '1.0.0'
 
 
 def read_input(input):
@@ -50,6 +50,10 @@ def print_sync(dccid, timespans):
         # Convert start and end times to SEED ordinate date format
         seed_start = seed_datetime(start)
         seed_end = seed_datetime(end)
+
+        # Convert empty location code of '--' to ''
+        if location == '--':
+            location = ''
 
         # Print SYNC timespan line
         print(f'{network}|{station}|{location}|{channel}|{seed_start}|{seed_end}||{samplerate}||||{quality}||||||')
